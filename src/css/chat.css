@@ -1,0 +1,190 @@
+body {
+    display: flex;
+    background-image: url("https://i.imgur.com/fevR9kl.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+main {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.upBar {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.title {
+    margin-left: 3%;
+    width: auto;
+    height: auto;
+    font-family: "휴먼둥근헤드라인", Times, serif;
+    font-style: italic;
+    cursor: pointer;
+}
+
+
+/* ////////////////////////////////////////// */
+
+.wrapper {
+    margin-bottom: 3%;
+    align-items: center;
+    position: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 550px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+
+/* ////////////////////////////////////////// */
+
+.user-container {
+    margin-top: 3%;
+    font-family: "나눔스퀘어라운드 ExtraBold", sans-serif;
+    font-size: 25px;
+    color: white;
+    text-align: left;
+}
+
+.name {
+    width: 300px;
+    height: flex;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 20px;
+    font-size: 25px;
+    margin-right: 350px;
+}
+
+
+/* ////////////////////////////////////////// */
+
+.display-container {
+    margin: 3%;
+    width: 650px;
+    height: 550px;
+    background-color: white;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.chatting-list {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: "나눔스퀘어라운드 ExtraBold", sans-serif;
+    font-size: 15px;
+}
+
+.chatting-list li {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.sent {
+    align-items: flex-end;
+}
+
+.sent .message {
+    background-color: black;
+    color: white;
+}
+
+.received .message {
+    background-color: thistle;
+    color: black;
+}
+
+.time {
+    margin: 1px;
+    font-size: 12px;
+}
+
+
+/* ////////////////////////////////////////// */
+
+.input-container {
+    display: flex;
+    margin-bottom: 3%;
+    align-items: center;
+}
+
+.chatting-input {
+    margin-right: 1%;
+    width: 500px;
+    height: 35px;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    font-family: "나눔스퀘어라운드 ExtraBold", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.send-button {
+    color: black;
+}
+
+
+/* ////////////////////////////////////////// */
+
+.modal_class {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 38%;
+    top: 40%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modalContent {
+    color: black;
+    padding: 20px;
+    border: 3px solid black;
+    font-family: "나눔스퀘어라운드 ExtraBold", sans-serif;
+    font-size: 15pt;
+    text-align: center;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}

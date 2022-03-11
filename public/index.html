@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en?">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- index.css 파일과 연결-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Black+Han+Sans&family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ceb1617ec.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 구글 웹폰트 추가 -->
+    <script src="index.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <title>EN</title>
+    </header>
+    <main>
+      <div class="upBar">
+        <h3 class="title" onclick="BtnClick('index.html')">EN__</h3>
+        <a href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC"
+            >MBTI 검사하기
+        </a>
+      </div>
+
+      <div class="box">
+        <div class="EN">"엥?"</div>
+
+        <div class="phrase">
+          <p>너 왜 그래…?<br />서로가 이해되지 않는 당신들을 위해,</p>
+        </div>
+
+        <button id="StartBtn" class="chat" onclick="openModal()">
+          대화 시작하기
+        </button>
+        <div id="modal_id" class="modal_class">
+          <div class="modalContent">
+            <p>닉네임과 MBTI를 입력해주세요!</p>
+            <label>
+              <input class="nickname" type="text" name="nickname" />
+            </label>
+            <div
+              class="mbti_class"
+              style="width: 50%; height: 10%; font-size: 20px"
+            ></div>
+            <select
+              id="mbti_id"
+              name="mbti"
+              onchange="selectBoxChange(this.value);"
+              style="width: 50%; height: 10%; font-size: 20px"
+            >
+              <option value="0">MBTI</option>
+              <option value="1">ENTJ</option>
+              <option value="2">ENTP</option>
+              <option value="3">ENFJ</option>
+              <option value="4">ENFP</option>
+              <option value="5">ESTJ</option>
+              <option value="6">ESTP</option>
+              <option value="7">ESFJ</option>
+              <option value="8">ESFP</option>
+              <option value="9">INTJ</option>
+              <option value="10">INTP</option>
+              <option value="11">INFJ</option>
+              <option value="12">INFP</option>
+              <option value="13">ISTJ</option>
+              <option value="14">ISTP</option>
+              <option value="15">ISFJ</option>
+              <option value="16">ISFP</option>
+            </select>
+          </div>
+          <div class="modal_footer">
+            <span id="nicknameBtn" class="close">다음</span>
+          </div>
+        </div>
+        <div class="modal_classTwo">
+          <div class="modalContentTwo">
+            <p>대화 주제와 상대방의 MBTI를 선택해주세요</p>
+            <p>대화 주제</p>
+            <label class="topic"
+              >고민 상담
+              <input type="radio" name="topic" value="advice" />
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="topic"
+              >일반 채팅
+              <input type="radio" name="topic" value="justTalk" />
+              <span class="checkmark"></span>
+            </label>
+            <p>상대방의 MBTI</p>
+            <select
+              id="mbti_idTwo"
+              name="othermbti"
+              onchange="selectBoxChangeTwo(this.value);"
+              style="width: 50%; height: 10%; font-size: 20px"
+            >
+              <option value="0">MBTI</option>
+              <option value="1">ENTJ</option>
+              <option value="2">ENTP</option>
+              <option value="3">ENFJ</option>
+              <option value="4">ENFP</option>
+              <option value="5">ESTJ</option>
+              <option value="6">ESTP</option>
+              <option value="7">ESFJ</option>
+              <option value="8">ESFP</option>
+              <option value="9">INTJ</option>
+              <option value="10">INTP</option>
+              <option value="11">INFJ</option>
+              <option value="12">INFP</option>
+              <option value="13">ISTJ</option>
+              <option value="14">ISTP</option>
+              <option value="15">ISFJ</option>
+              <option value="16">ISFP</option>
+            </select>
+          </div>
+          <div class="modal_footerTwo">
+            <span id="chatStartBtn" class="closeTwo">확인</span>
+          </div>
+        </div>
+        <div class="loader">
+          <div class="loading"></div>
+          <p>매칭중입니다</p>
+        </div>
+        <div class="made">Made by J_J</div>
+      </div>
+    </main>
+  </body>
+</html>

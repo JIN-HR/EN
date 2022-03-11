@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main>
+        <div class="upBar">
+            <h3 class="title" onclick="BtnClick('../public/index.html')">EN__</h3>
+        </div>
+
+        <div class="wrapper">
+            <div class="user-container">
+                <label for="name" class="name"> 익명의 상대 </label>
+
+                <button id="StopBtn" class="chat" onclick="openModal()"> 대화 종료 </button>
+                <div id="modal_id" class="modal_class">
+                    <div class="modalContent">
+                        <p>대화를 종료하고 메인 화면으로 이동하시겠습니까?</p>
+
+                        <button class="modal_button" onclick="BtnClick('../public/index.html')">확인</button>
+                        <button class="modal_button" onclick="closeModal()">취소</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="display-container">
+                <ul class="chatting-list">
+                    </li>
+                </ul>
+            </div>
+            <div class="input-container">
+                <input type="text" class="chatting-input">
+                <button class="send-button"> 전송 </button>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+<script src="../node_modules/socket.io/client-dist/socket.io.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/chat2.js"></script>
+<link rel="stylesheet" href="css/chat.css">
+<script src="../chat.js"></script>
+
+</html>
